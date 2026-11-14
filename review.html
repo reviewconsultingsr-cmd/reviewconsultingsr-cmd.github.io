@@ -121,6 +121,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
    </select>
   </label>
   <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Review Consulting may publish this review on reviewconsulting.eu and its social media, shown as I chose above. Reviews are checked before publishing and may be shortened, never changed in meaning.</span></label>
+  <label class="consent"><input type="checkbox" name="newsletter" value="yes"><span>Also send me the free Systematic Review Starter Kit and the monthly newsletter (optional, unsubscribe anytime).</span></label>
   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
   <button class="btn" type="submit">Send my review</button>
   <p id="st" style="text-align:center;font-size:14px;margin:10px 0 0"></p>
@@ -152,10 +153,11 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
   if(!rating){st.style.color='#E25B5B';st.textContent='Please choose a star rating.';return;}
   var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
   var name=f.name.value.trim();
-  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\nService: '+f.service.value+'\n\nReview:\n'+f.review.value.trim()+'\n\nWhat changed: '+(f.outcome.value.trim()||'-')+'\nTitle/institution: '+(f.title.value.trim()||'-')+'\nShow name as: '+f.display.value+'\nConsent to publish: yes';
+  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\nService: '+f.service.value+'\n\nReview:\n'+f.review.value.trim()+'\n\nWhat changed: '+(f.outcome.value.trim()||'-')+'\nTitle/institution: '+(f.title.value.trim()||'-')+'\nShow name as: '+f.display.value+'\nConsent to publish: yes\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
   var d=new URLSearchParams();
   d.set('name',name);d.set('email',f.email.value.trim());d.set('review_type','Client review');d.set('stage','Rating '+rating+'/5');
   d.set('message',msg);d.set('_subject','New client review ('+rating+'/5) from '+name);d.set('_honey',f._honey.value);
+  if(f.newsletter.checked){try{var bv=new URLSearchParams();bv.set('EMAIL',f.email.value.trim());bv.set('email_address_check','');bv.set('locale','en');bv.set('html_type','simple');fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:bv});}catch(x){}}
   fetch('https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec',{method:'POST',mode:'no-cors',body:d}).then(function(){
    f.classList.add('hidden');document.getElementById('done').classList.remove('hidden');window.scrollTo(0,0);
   }).catch(function(){
