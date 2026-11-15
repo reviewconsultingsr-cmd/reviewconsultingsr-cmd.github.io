@@ -77,6 +77,21 @@ section>.wrap:not(.art)>h2:after{content:"";display:block;width:52px;height:3px;
 .step,.card,details{box-shadow:0 4px 16px rgba(14,32,56,.04)}
 @media(max-width:760px){section{padding:30px 0}.hero{padding:24px 0 30px}.topbar .soc{display:none}}
 </style>
+<style id="nlpop-css">
+.nlpop{position:fixed;inset:0;z-index:200;background:rgba(14,32,56,.55);display:flex;align-items:center;justify-content:center;padding:18px}
+.nlpop[hidden]{display:none}
+.nlpop-box{position:relative;background:#fff;border-radius:18px;max-width:420px;width:100%;padding:30px 24px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25);border-top:4px solid var(--teal);animation:nlin .25s ease}
+@keyframes nlin{from{transform:translateY(14px);opacity:0}}
+.nlpop-x{position:absolute;top:6px;right:12px;border:0;background:none;font-size:30px;line-height:1;color:var(--muted);cursor:pointer}
+.nlpop-pyro{width:96px;height:auto;display:block;margin:-4px auto 0}
+.nlpop-ic{width:44px;height:44px;fill:none;stroke:var(--teal);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nlpop h3{margin:6px 0 8px;color:var(--navy);font-size:21px}
+.nlpop p{margin:0 0 14px;color:var(--muted);font-size:15px}
+.nlpop form{display:flex;flex-direction:column;gap:10px;position:relative}
+.nlpop input[type=email]{padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:16px}
+.nlpop .btn{width:100%;text-align:center}
+.nlpop .nlpop-s{font-size:12.5px;margin:10px 0 0}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><div class="tb-l"><a href="mailto:info@reviewconsulting.eu"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@reviewconsulting.eu</a><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>Online · Greece, Cyprus &amp; worldwide</span></div><div class="soc"><a href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">TikTok</a><a href="https://orcid.org/0009-0008-6394-1891" target="_blank" rel="noopener">ORCID</a></div></div></div>
@@ -148,5 +163,51 @@ section>.wrap:not(.art)>h2:after{content:"";display:block;width:52px;height:3px;
 </div></section>
 
 <footer><div class="wrap">© Review Consulting · <a href="https://reviewconsulting.eu">reviewconsulting.eu</a> · <a href="https://www.youtube.com/@ReviewConsultingSR">YouTube</a> · <a href="https://www.tiktok.com/@review_consulting">TikTok</a> · Support with systematic, scoping and literature reviews, meta-analysis and university projects (theses, dissertations).</div></footer>
+<div id="nlpop" class="nlpop" hidden role="dialog" aria-modal="true" aria-labelledby="nlpop-t">
+ <div class="nlpop-box">
+  <button type="button" class="nlpop-x" aria-label="Close">&times;</button>
+  <div class="nlpop-form">
+   <svg class="nlpop-pyro" aria-hidden="true" viewBox="0 0 1000 1100"><defs><filter id="pyroW" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceAlpha" operator="dilate" radius="11" result="d"></feMorphology><feFlood flood-color="#F5F7FA"></feFlood><feComposite in2="d" operator="in" result="o"></feComposite><feMerge><feMergeNode in="o"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g filter="url(#pyroW)"><line x1="330" y1="640" x2="200" y2="760" stroke="#0E2038" stroke-width="46" stroke-linecap="round"></line><line x1="330" y1="640" x2="200" y2="760" stroke="#40C4B4" stroke-width="30" stroke-linecap="round"></line><circle cx="200" cy="760" r="38" fill="#40C4B4" stroke="#0E2038" stroke-width="7"></circle><line x1="390" y1="880" x2="390" y2="985" stroke="#0E2038" stroke-width="44"></line><line x1="390" y1="880" x2="390" y2="980" stroke="#40C4B4" stroke-width="28"></line><rect x="328" y="968" width="112" height="62" rx="28" fill="#0E2038"></rect><line x1="610" y1="880" x2="610" y2="985" stroke="#0E2038" stroke-width="44"></line><line x1="610" y1="880" x2="610" y2="980" stroke="#40C4B4" stroke-width="28"></line><rect x="548" y="968" width="112" height="62" rx="28" fill="#0E2038"></rect><polygon points="500,134 888,906 112,906" fill="#0E2038"></polygon><polygon points="500.0,140.0 591.5,323.0 408.5,323.0" fill="#40C4B4" stroke="#0E2038" stroke-width="9" stroke-linejoin="round"></polygon><polygon points="401.5,337.0 598.5,337.0 686.5,513.0 313.5,513.0" fill="#F5F7FA" stroke="#0E2038" stroke-width="9" stroke-linejoin="round"></polygon><polygon points="306.5,527.0 693.5,527.0 781.5,703.0 218.5,703.0" fill="#C4CEDC" stroke="#0E2038" stroke-width="9" stroke-linejoin="round"></polygon><polygon points="211.5,717.0 788.5,717.0 880.0,900.0 120.0,900.0" fill="#8096B2" stroke="#0E2038" stroke-width="9" stroke-linejoin="round"></polygon><g class="pw-arm"><line x1="670" y1="600" x2="827" y2="399" stroke="#0E2038" stroke-width="46" stroke-linecap="round"></line><line x1="670" y1="600" x2="827" y2="399" stroke="#40C4B4" stroke-width="30" stroke-linecap="round"></line><circle cx="827" cy="399" r="38" fill="#40C4B4" stroke="#0E2038" stroke-width="7"></circle><path d="M867,324 q40,15 55,55" fill="none" stroke="#40C4B4" stroke-width="10" stroke-linecap="round"></path><path d="M897,294 q55,20 75,78" fill="none" stroke="#40C4B4" stroke-width="10" stroke-linecap="round" opacity=".6"></path></g><g class="eyes"><g class="eye"><ellipse cx="420" cy="600" rx="46" ry="54" fill="white" stroke="#0E2038" stroke-width="8"></ellipse><ellipse cx="420" cy="608" rx="24" ry="26" fill="#0E2038"></ellipse><circle cx="422" cy="596" r="7" fill="white"></circle></g><g class="eye"><ellipse cx="580" cy="600" rx="46" ry="54" fill="white" stroke="#0E2038" stroke-width="8"></ellipse><ellipse cx="580" cy="608" rx="24" ry="26" fill="#0E2038"></ellipse><circle cx="582" cy="596" r="7" fill="white"></circle></g></g><ellipse cx="345" cy="685" rx="28" ry="15" fill="#F08CA0"></ellipse><ellipse cx="655" cy="685" rx="28" ry="15" fill="#F08CA0"></ellipse><path d="M378,528 Q420,502 462,528" fill="none" stroke="#0E2038" stroke-width="10" stroke-linecap="round"></path><path d="M538,528 Q580,502 622,528" fill="none" stroke="#0E2038" stroke-width="10" stroke-linecap="round"></path><path d="M445,775 A55,40 0 0 0 555,775 Z" fill="#0E2038"></path><path d="M472,800 A28,15 0 0 0 528,800 Z" fill="#F08CA0"></path></g></svg>
+   <h3 id="nlpop-t">Free Systematic Review Starter Kit</h3>
+   <p>Get the free PDF guide and a short monthly newsletter with practical tips on systematic reviews and meta-analysis.</p>
+   <form id="nlpop-f" novalidate>
+    <input type="email" name="EMAIL" required placeholder="Your email" autocomplete="email">
+    <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+    <button class="btn" type="submit">Send me the kit</button>
+   </form>
+   <p class="nlpop-s">No spam. Unsubscribe anytime.</p>
+  </div>
+  <div class="nlpop-ok" hidden>
+   <h3>Thank you!</h3>
+   <p>You're subscribed.</p>
+   <a class="btn" href="/starter-kit.html">Open the Starter Kit</a>
+  </div>
+ </div>
+</div>
+<script>
+(function(){
+ var K='rc_nl',p=document.getElementById('nlpop');if(!p)return;
+ var s={};try{s=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+ if(s.done||(s.skip&&Date.now()-s.skip<14*864e5))return;
+ var shown=false;
+ function save(v){try{localStorage.setItem(K,JSON.stringify(v))}catch(e){}}
+ function show(){if(shown||document.querySelector('#contact:target'))return;shown=true;p.hidden=false;document.body.style.overflow='hidden';}
+ function close(){p.hidden=true;document.body.style.overflow='';if(!s.done)save({skip:Date.now()});}
+ setTimeout(show,3000);
+ window.addEventListener('scroll',function(){if(window.scrollY>document.body.scrollHeight*0.35)show();},{passive:true});
+ p.querySelector('.nlpop-x').addEventListener('click',close);
+ p.addEventListener('click',function(e){if(e.target===p)close();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!p.hidden)close();});
+ p.querySelector('form').addEventListener('submit',function(e){
+  e.preventDefault();var f=e.target,em=f.EMAIL.value.trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){f.EMAIL.focus();f.EMAIL.style.borderColor='#d64545';return;}
+  if(f.email_address_check.value)return;
+  var b=new URLSearchParams();b.set('EMAIL',em);b.set('email_address_check','');b.set('locale','en');b.set('html_type','simple');
+  try{fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:b});}catch(x){}
+  s.done=1;save({done:1});
+  p.querySelector('.nlpop-form').hidden=true;p.querySelector('.nlpop-ok').hidden=false;
+ });
+})();
+</script>
 </body>
 </html>
