@@ -13,6 +13,8 @@
 <link rel="canonical" href="https://reviewconsulting.eu/">
 <link rel="alternate" hreflang="en" href="https://reviewconsulting.eu/">
 <link rel="alternate" hreflang="el" href="https://reviewconsulting.eu/el/">
+<link rel="alternate" hreflang="es" href="https://reviewconsulting.eu/es/">
+<link rel="alternate" hreflang="fr" href="https://reviewconsulting.eu/fr/">
 <link rel="alternate" hreflang="ar" href="https://reviewconsulting.eu/ar/">
 <link rel="alternate" hreflang="x-default" href="https://reviewconsulting.eu/">
 
@@ -232,6 +234,18 @@ form .b{justify-self:start}
 .logo,.nav a,.b-sm,.lang a,.lang button{white-space:nowrap}
 html,body{overflow-x:clip}
 @media(min-width:1081px) and (max-width:1500px){.nav{gap:18px}.nav a{font-size:14.5px}.hd-in{gap:22px}}
+/* language dropdown */
+.lsel{position:relative}
+.lsel summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13.5px;font-weight:600;color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:7px 10px;line-height:1;user-select:none}
+.lsel summary::-webkit-details-marker{display:none}
+.lsel summary:after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);margin-inline-start:2px}
+.lsel[open] summary:after{transform:translateY(1px) rotate(-135deg)}
+.lsel summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6}
+.lsel summary:hover{border-color:var(--teal-l)}
+.lsel ul{position:absolute;inset-inline-end:0;top:calc(100% + 6px);list-style:none;margin:0;padding:6px;background:#fff;border:1px solid var(--rule);border-radius:6px;box-shadow:0 14px 34px rgba(14,32,56,.14);min-width:160px;z-index:60}
+.lsel li a{display:block;padding:9px 12px;border-radius:4px;color:var(--ink);text-decoration:none;font-size:15px}
+.lsel li a:hover{background:var(--mist)}
+.lsel li a.on{font-weight:600;color:var(--teal)}
 .nlpop{position:fixed;inset:0;z-index:200;background:rgba(14,32,56,.5);display:flex;align-items:center;justify-content:center;padding:18px}.nlpop[hidden]{display:none}
 .nlpop-box{position:relative;background:#fff;border-radius:6px;max-width:440px;width:100%;padding:36px 32px 28px;border-top:3px solid var(--teal-l)}
 .nlpop-x{position:absolute;top:8px;right:12px;border:0;background:none;font-size:28px;line-height:1;color:var(--slate);cursor:pointer}
@@ -251,7 +265,7 @@ html,body{overflow-x:clip}
    <a href="#faq">FAQ</a>
   </nav>
   <div class="hd-r">
-   <div class="lang"><a class="on" aria-current="true" href="/" hreflang="en" onclick="try{localStorage.setItem('rc_lang','en')}catch(e){}">EN</a><a href="/el/" hreflang="el" onclick="try{localStorage.setItem('rc_lang','el')}catch(e){}">ΕΛ</a><a href="/ar/" hreflang="ar" lang="ar">عربي</a></div>
+   <details class="lsel"><summary aria-label="Language" title="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span>EN</span></summary><ul><li><a href="/" hreflang="en" lang="en" aria-current="true" class="on" onclick="try{localStorage.setItem('rc_lang','en')}catch(e){}">English</a></li><li><a href="/el/" hreflang="el" lang="el" onclick="try{localStorage.setItem('rc_lang','el')}catch(e){}">Ελληνικά</a></li><li><a href="/es/" hreflang="es" lang="es" onclick="try{localStorage.setItem('rc_lang','es')}catch(e){}">Español</a></li><li><a href="/fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('rc_lang','fr')}catch(e){}">Français</a></li><li><a href="/ar/" hreflang="ar" lang="ar" onclick="try{localStorage.setItem('rc_lang','ar')}catch(e){}">العربية</a></li></ul></details>
    <a class="b b-sm" href="#contact">Free assessment</a>
    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </div>
@@ -567,7 +581,7 @@ function set(l){
 document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-l'));});});
 var saved=null;try{saved=localStorage.getItem('rc_lang');}catch(e){}
 var q=(location.search.match(/[?&]lang=(en|el)/)||[])[1];
-if(q==='el'||(saved==='el'&&!q)){location.replace('/el/'+location.hash);}else{set('en');}
+var P={el:'/el/',es:'/es/',fr:'/fr/',ar:'/ar/'};var t=q||(saved!=='en'?saved:null);if(t&&P[t]){location.replace(P[t]+location.hash);}else{set('en');}
 })();
 </script>
 <script>
@@ -633,5 +647,6 @@ document.querySelectorAll('.more').forEach(function(b){b.addEventListener('click
   new IntersectionObserver(function(e){hv=e[0].isIntersecting;u();}).observe(h);
   new IntersectionObserver(function(e){cv=e[0].isIntersecting;u();}).observe(c);}
 })();</script>
+<script>document.addEventListener("click",function(e){document.querySelectorAll("details.lsel[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open");});});</script>
 </body>
 </html>
