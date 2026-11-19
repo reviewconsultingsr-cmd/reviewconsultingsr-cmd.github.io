@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Systematic Review Starter Kit (Türkçe) | Review Consulting</title>
+<meta name="description" content="Ücretsiz Systematic Review Starter Kit: derleme türleri rehberi, PICO/PCC/PEO çalışma sayfaları, FINER ölçütleri, arama stratejisi şablonu, yanlılık riski aracı seçimi ve PRISMA 2020 kontrolü.">
+<meta name="robots" content="noindex">
+<style>
+:root{--navy:#0E2038;--teal:#40C4B4;--teal-d:#0E7C6F;--yel:#FFD666;--ink:#1D2A3D;--muted:#5B6B82;--line:#C9D3E0;--light:#EEF3F8}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#E9EEF4;font-size:15px;line-height:1.55}
+.bar{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap}
+.bar a{color:var(--teal);font-weight:700;text-decoration:none}
+.bar button{background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:9px 18px;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit}
+.page{max-width:820px;margin:22px auto;background:#fff;padding:46px 54px;border-radius:6px;box-shadow:0 6px 24px rgba(14,32,56,.12)}
+.cover{background:var(--navy);color:#fff;text-align:center;padding:70px 40px}
+.cover .kick{color:var(--teal);font-weight:800;letter-spacing:.14em;font-size:13px}
+.cover h1{font-size:44px;line-height:1.1;margin:14px 0 6px}
+.cover h1 span{color:var(--yel)}
+.cover p{color:#D5DEEA;font-size:17px}
+.cover .who{margin-top:34px;font-weight:700}
+.cover .cred{color:#D5DEEA;font-size:13px}
+.cover .url{display:inline-block;margin-top:22px;background:var(--teal);color:var(--navy);font-weight:800;padding:10px 26px;border-radius:999px;text-decoration:none}
+.pyr{width:120px;height:auto;margin:0 auto 8px;display:block}
+.kick{color:var(--teal-d);font-weight:800;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+h2{font-size:27px;color:var(--navy);margin:4px 0 8px;line-height:1.2}
+h3{font-size:17px;color:var(--navy);margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;margin:8px 0 6px;font-size:14px}
+th,td{border:1px solid var(--line);padding:7px 9px;vertical-align:top;text-align:left}
+th{background:#DDF4F1;color:var(--navy)}
+tr:nth-child(even) td{background:var(--light)}
+td.box{width:30px;text-align:center;font-size:17px;background:#fff!important}
+td.lab{width:34%;background:var(--light)!important;font-weight:700}
+td.fill{height:46px;color:#8A97A8;font-size:12.5px}
+td.tall{height:90px}
+.tip{background:#FFF6D6;border:1px solid var(--yel);padding:10px 14px;border-radius:6px;margin:14px 0;font-size:14px}
+.cta{background:#DDF4F1;border:2px solid var(--teal);border-radius:10px;padding:22px 26px}
+.cta a{color:var(--teal-d);font-weight:800;font-size:18px}
+.refs p{padding-left:22px;text-indent:-22px;font-size:13px;margin:0 0 8px}
+.foot{color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:26px;padding-top:8px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.foot a{color:var(--muted)}
+.ex{color:var(--muted);font-size:12.5px}
+@media(max-width:700px){.page{padding:26px 18px;margin:10px}.cover h1{font-size:32px}}
+@media print{
+ body{background:#fff;font-size:11.5pt}
+ .bar{display:none}
+ .page{box-shadow:none;margin:0;max-width:none;border-radius:0;padding:0 4mm;page-break-after:always}
+ .page:last-child{page-break-after:auto}
+ .cover{-webkit-print-color-adjust:exact;print-color-adjust:exact;min-height:265mm;display:flex;flex-direction:column;justify-content:center}
+ th,tr:nth-child(even) td,.tip,.cta,td.lab{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ @page{size:A4;margin:14mm}
+}
+</style>
+</head>
+<body>
+<div class="bar"><span><b>REVIEW CONSULTING</b> · Systematic Review Starter Kit</span><span><button onclick="window.print()">PDF olarak kaydet / Yazdır</button> &nbsp; <a href="https://reviewconsulting.eu">https://reviewconsulting.eu</a> &nbsp; <a href="/starter-kit.html" hreflang="en" lang="en">EN</a> <a href="/el/starter-kit.html" hreflang="el" lang="el">ΕΛ</a> <a href="/es/starter-kit.html" hreflang="es" lang="es">ES</a> <a href="/fr/starter-kit.html" hreflang="fr" lang="fr">FR</a> <a href="/tr/starter-kit.html" hreflang="tr" lang="tr" style="font-weight:700;text-decoration:underline">TR</a> <a href="/ar/starter-kit.html" hreflang="ar" lang="ar">AR</a></span></div>
+
+<section class="page cover">
+ <svg class="pyr" viewBox="0 0 120 100" aria-hidden="true"><polygon points="60,4 72,26 48,26" fill="#40C4B4"/><polygon points="46,30 74,30 86,52 34,52" fill="#fff"/><polygon points="32,56 88,56 100,78 20,78" fill="#C9D6E6"/><polygon points="18,82 102,82 112,98 8,98" fill="#8EA1BA"/></svg>
+ <div class="kick">REVIEW CONSULTING</div>
+ <h1>Sistematik derleme<br><span>Starter Kit</span></h1>
+ <p>Belirsiz bir fikirden gönderilebilir bir derlemeye:<br>6 adımda çalışma sayfaları, şablonlar ve kontrol listeleri.</p>
+ <div class="who">Dr. Stylianos Sergios Chatziioannou</div>
+ <div class="cred">MD, MBA, 2MSc, PhD(c) · Klinisyen araştırmacı ve dergi hakemi</div>
+ <a class="url" href="https://reviewconsulting.eu">https://reviewconsulting.eu</a>
+</section>
+
+<section class="page">
+ <div class="kick">Bu kit nasıl kullanılır</div>
+ <h2>Fikirden gönderime altı adım</h2>
+ <p>Yazdırın, PDF olarak kaydedin veya kâğıt üzerinde doldurun. Adımları sırayla izleyin: reddedilen derlemelerin çoğu istatistikten çok önce, 1. veya 2. adımda yanlış gitmiştir. Her adım kısa bir kontrol listesiyle biter; böylece bir sonrakine geçmeye hazır olup olmadığınızı her zaman bilirsiniz.</p>
+ <table><tr><th>Adım</th><th>Neye karar veriyorsunuz</th></tr>
+ <tr><td>1</td><td>Sorunuza hangi derleme türü uyuyor</td></tr>
+ <tr><td>2</td><td>Araştırma sorunuz (PICO, PCC veya PEO)</td></tr>
+ <tr><td>3</td><td>Soru yanıtlanmaya değer mi (FINER ölçütleri)</td></tr>
+ <tr><td>4</td><td>Arama stratejiniz ve veri tabanları</td></tr>
+ <tr><td>5</td><td>Protokol, kayıt, seçim ve yanlılık riski</td></tr>
+ <tr><td>6</td><td>Raporlama: gönderim öncesi PRISMA 2020 kontrolü</td></tr></table>
+ <div class="tip"><b>Pyro'nun ipucu.</b> İlk günden basit bir kayıt tutun: tarih, veri tabanı, tam arama ifadesi ve sonuç sayısı. Bu sayılara PRISMA akış şeması için ihtiyacınız olacak ve sonda yeniden oluşturmak çok zahmetlidir.</div>
+</section>
+
+<section class="page">
+ <div class="kick">1. Adım</div>
+ <h2>Doğru derleme türünü seçin</h2>
+ <p>Kulağa etkileyici geleni değil, sorunuza uyanı seçin. Kapsam derlemesi (scoping review) "daha hafif" bir sistematik derleme değildir: farklı türde bir soruyu yanıtlar (Peters et al., 2020).</p>
+ <table><tr><th>Tür</th><th>Şu tür soruları yanıtlar…</th><th>Tipik özellikler</th></tr>
+ <tr><td><b>Sistematik derleme</b></td><td>X müdahalesi Y sonucu için işe yarıyor mu? Z'nin yaygınlığı nedir?</td><td>Odaklı PICO sorusu, kayıtlı protokol, kapsamlı arama, 2 bağımsız değerlendirici, yanlılık riski değerlendirmesi, PRISMA 2020'ye göre raporlama.</td></tr>
+ <tr><td><b>Meta-analiz</b></td><td>Benzer tüm çalışmaları birleştirdiğimizde etki ne kadar büyük?</td><td>Sistematik derlemenin içindeki istatistiksel bir adımdır. Birleştirilebilecek kadar benzer çalışmalar gerektirir.</td></tr>
+ <tr><td><b>Kapsam derlemesi</b></td><td>Bir konuda hangi kanıtlar var? Boşluklar nerede?</td><td>Geniş PCC sorusu, kanıtı haritalar, genellikle birleşik etki yoktur, PRISMA-ScR'ye göre raporlama (Tricco et al., 2018).</td></tr>
+ <tr><td><b>Literatür (anlatısal) derlemesi</b></td><td>Şimdiye kadar ne biliyoruz? Temel çalışmalar ne söylüyor?</td><td>Seçilmiş çalışmalar, esnek arama, uzman yorumu, zorunlu protokol yok.</td></tr></table>
+ <h3>Hızlı karar</h3>
+ <table>
+ <tr><td class="box">☐</td><td>Sorum bir şeyin <b>işe yarayıp yaramadığını</b> veya bir etkinin büyüklüğünü soruyor: sistematik derleme (meta-analizli veya meta-analizsiz).</td></tr>
+ <tr><td class="box">☐</td><td>Sorum <b>neyin var olduğunu</b> veya bir konunun nasıl çalışıldığını soruyor: kapsam derlemesi.</td></tr>
+ <tr><td class="box">☐</td><td>Temel çalışmalarla bir görüşü <b>açıklamak veya savunmak</b> istiyorum: literatür derlemesi.</td></tr>
+ <tr><td class="box">☐</td><td>Danışmanıma veya hedef dergiye hangi türü beklediklerini sordum.</td></tr></table>
+</section>
+
+<section class="page">
+ <div class="kick">2. Adım</div>
+ <h2>Araştırma sorunuzu kurun</h2>
+ <p>İyi bir soru her öğeyi adlandırır; böylece bir meslektaşınız size hiçbir şey sormadan onu arayabilir. Derleme türünüze uyan çerçeveyi doldurun.</p>
+ <h3>PICO: müdahalelerin sistematik derlemeleri için</h3>
+ <table>
+ <tr><td class="lab">P · Popülasyon</td><td class="fill">Kim? ör. gestasyonel diyabetli kadınlar</td></tr>
+ <tr><td class="lab">I · Müdahale</td><td class="fill">Ne test ediliyor? ör. yemeklerden sonra yürüyüş</td></tr>
+ <tr><td class="lab">C · Karşılaştırma</td><td class="fill">Neye karşı? ör. olağan bakım</td></tr>
+ <tr><td class="lab">O · Sonuç</td><td class="fill">Ne değişiyor? ör. yemek sonrası glukoz, insülin ihtiyacı</td></tr></table>
+ <h3>PCC: kapsam derlemeleri için</h3>
+ <table>
+ <tr><td class="lab">P · Popülasyon</td><td class="fill">ör. üniversite öğrencileri</td></tr>
+ <tr><td class="lab">C · Kavram</td><td class="fill">Haritalamak istediğiniz şey, ör. doğurganlık farkındalığı</td></tr>
+ <tr><td class="lab">C · Bağlam</td><td class="fill">Ortam veya yer, ör. Avrupa</td></tr></table>
+ <h3>PEO: risk faktörleri ve ilişkiler için</h3>
+ <table>
+ <tr><td class="lab">P · Popülasyon</td><td class="fill">ör. yetişkinler</td></tr>
+ <tr><td class="lab">E · Maruziyet</td><td class="fill">ör. gece vardiyası</td></tr>
+ <tr><td class="lab">O · Sonuç</td><td class="fill">ör. tip 2 diyabet</td></tr></table>
+ <table><tr><td class="lab">TEK cümlede sorum</td><td class="fill tall">Soru işaretiyle biter. Bir popülasyon, bir müdahale veya maruziyet, bir ya da iki ana sonuç.</td></tr></table>
+</section>
+
+<section class="page">
+ <div class="kick">3. Adım</div>
+ <h2>Yanıtlamaya değer mi? FINER ölçütleri</h2>
+ <p>Aylar harcamadan önce sorunuzu FINER ölçütlerinden geçirin (Hulley et al., 2013). Herhangi bir yanıt "hayır" ise soruyu şimdi düzeltin.</p>
+ <table><tr><th></th><th>Ölçüt</th><th>Kendinize sorun</th></tr>
+ <tr><td class="box">☐</td><td><b>F</b>easible</td><td>Yeterli birincil çalışma var mı? Zamanım, ekibim ve veri tabanı erişimim var mı?</td></tr>
+ <tr><td class="box">☐</td><td><b>I</b>nteresting</td><td>Beni ve alanımı ilgilendiriyor mu? 6 ila 12 ay sonra hâlâ ilgilenecek miyim?</td></tr>
+ <tr><td class="box">☐</td><td><b>N</b>ovel</td><td>Tam olarak bu konuda yakın tarihli veya süren bir derleme yok mu? (PROSPERO, OSF, Cochrane, PubMed'i kontrol edin.)</td></tr>
+ <tr><td class="box">☐</td><td><b>E</b>thical</td><td>Hastalara ve verilere saygılı mı? (Yayımlanmış verilerin derlemeleri nadiren etik onay gerektirir: yerel olarak kontrol edin.)</td></tr>
+ <tr><td class="box">☐</td><td><b>R</b>elevant</td><td>Yanıt uygulamayı, politikayı veya gelecekteki araştırmayı değiştirir mi?</td></tr></table>
+ <h3>Daha önce yapılmış mı?</h3>
+ <table>
+ <tr><td class="box">☐</td><td>Konumla ilgili kayıtlı derlemeleri PROSPERO'da aradım.</td></tr>
+ <tr><td class="box">☐</td><td>OSF Registries'de aradım.</td></tr>
+ <tr><td class="box">☐</td><td>Cochrane Library ve PubMed'de "systematic review" veya "meta-analysis" filtreleriyle aradım.</td></tr>
+ <tr><td class="box">☐</td><td>Benzer bir derleme varsa: yeni bir açım var (popülasyon, ortam, sonuç, daha yeni çalışmalar, farklı desen).</td></tr></table>
+ <div class="tip"><b>Pyro'nun ipucu.</b> 5 veya daha fazla yıl önce yayımlanmış ve o zamandan beri birçok yeni çalışma çıkmış bir derleme, güncelleme için gayet iyi bir nedendir. Bunu girişte açıkça belirtin.</div>
+</section>
+
+<section class="page">
+ <div class="kick">4. Adım</div>
+ <h2>Arama stratejinizi planlayın</h2>
+ <p>Sorunuzun her öğesini bir kavrama dönüştürün. Bir kavram içinde eş anlamlıları şununla birleştirin: <b>OR</b>. Kavramlar arasında şununla birleştirin: <b>AND</b>. Hem konu başlıklarını (MeSH gibi) hem serbest metin kelimelerini kullanın.</p>
+ <table><tr><th></th><th>Kavram 1 (Popülasyon)</th><th>Kavram 2 (Müdahale / Maruziyet)</th><th>Kavram 3 (Sonuç, isteğe bağlı)</th></tr>
+ <tr><td class="lab">Konu başlıkları (MeSH / Emtree)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="lab">Serbest metin eş anlamlıları</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="lab">Yazım varyantları ve kesme (ör. random*)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr></table>
+ <p class="ex">Örnek: ("Diabetes, Gestational"[MeSH] OR "gestational diabetes") AND (walking OR "physical activity" OR exercise) AND (postprandial OR glucose)</p>
+ <h3>Veri tabanları</h3>
+ <table>
+ <tr><td class="box">☐</td><td>PubMed / MEDLINE</td></tr><tr><td class="box">☐</td><td>Embase</td></tr>
+ <tr><td class="box">☐</td><td>Cochrane Library (CENTRAL)</td></tr><tr><td class="box">☐</td><td>CINAHL veya PsycINFO (alanınızla ilgiliyse)</td></tr>
+ <tr><td class="box">☐</td><td>Çalışma kayıtları: ClinicalTrials.gov, WHO ICTRP</td></tr><tr><td class="box">☐</td><td>Gri literatür ve dahil edilen çalışmaların kaynakçaları</td></tr></table>
+ <h3>Arama kaydı</h3>
+ <table><tr><th>Tarih</th><th>Veri tabanı</th><th>Arama ifadesi sürümü</th><th>Sonuç</th></tr>
+ <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr></table>
+ <div class="tip"><b>Pyro'nun ipucu.</b> En az iki veya üç veri tabanında arayın. Yalnızca birinde aramak, hakemlerin bir sistematik derlemeyi sorgulamasının en yaygın nedenlerinden biridir.</div>
+</section>
+
+<section class="page">
+ <div class="kick">5. Adım</div>
+ <h2>Protokol, seçim ve yanlılık riski</h2>
+ <h3>Protokol ve kayıt</h3>
+ <table>
+ <tr><td class="box">☐</td><td>Seçim başlamadan önce yazılmış protokol (soru, uygunluk ölçütleri, arama, yöntemler).</td></tr>
+ <tr><td class="box">☐</td><td>PROSPERO'ya (sağlık sonucu olan sistematik derlemeler) veya OSF'ye (kapsam ve diğer derlemeler) kayıtlı.</td></tr>
+ <tr><td class="box">☐</td><td>Kayıt numarası yöntem bölümü için not edildi.</td></tr></table>
+ <h3>Seçim</h3>
+ <table>
+ <tr><td class="box">☐</td><td>İki değerlendirici başlık ve özetleri bağımsız olarak tarar.</td></tr>
+ <tr><td class="box">☐</td><td>İki değerlendirici tam metinleri bağımsız olarak değerlendirir.</td></tr>
+ <tr><td class="box">☐</td><td>Anlaşmazlıklar tartışmayla veya üçüncü bir değerlendiriciyle çözülür.</td></tr>
+ <tr><td class="box">☐</td><td>Her tam metin dışlamasının nedeni kaydedilir.</td></tr>
+ <tr><td class="box">☐</td><td>Bir tarama aracı seçildi (örneğin Rayyan veya Covidence) ve 20 ila 50 kayıtta pilot tur yapıldı.</td></tr></table>
+ <h3>Bir yanlılık riski aracı seçin</h3>
+ <table><tr><th>Çalışma deseni</th><th>Yaygın araç</th></tr>
+ <tr><td>Randomize kontrollü çalışmalar</td><td>RoB 2 (Sterne et al., 2019)</td></tr>
+ <tr><td>Randomize olmayan müdahale çalışmaları</td><td>ROBINS-I (Sterne et al., 2016)</td></tr>
+ <tr><td>Kohort, vaka-kontrol, kesitsel ve diğer desenler</td><td>JBI eleştirel değerlendirme kontrol listeleri veya desene özgü başka geçerli bir araç</td></tr>
+ <tr><td>Kapsam derlemeleri</td><td>Eleştirel değerlendirme isteğe bağlıdır ve genellikle yapılmaz (Peters et al., 2020)</td></tr></table>
+ <div class="tip"><b>Pyro'nun ipucu.</b> Sonucu daha temiz göstermek için yüksek riskli çalışmaları silmeyin. Onları tutun ve onlar olmadan bir duyarlılık analizi yapın. Yanıt değişirse sonucunuz daha az kesindir.</div>
+</section>
+
+<section class="page">
+ <div class="kick">6. Adım</div>
+ <h2>Göndermeden önce: PRISMA 2020 kontrolü</h2>
+ <p>PRISMA 2020 bildirgesine dayanan kısa bir gönderim öncesi kontrol (Page et al., 2021). Resmî kontrol listesinin tamamını her zaman doldurun ve makalenizle birlikte gönderin; kapsam derlemeleri için PRISMA-ScR kullanın (Tricco et al., 2018).</p>
+ <table>
+ <tr><td class="box">☐</td><td><b>Başlık</b> raporu sistematik derleme (ve yapıldıysa meta-analiz) olarak tanımlar.</td></tr>
+ <tr><td class="box">☐</td><td><b>Özet</b> PRISMA 2020 for Abstracts yapısını izler.</td></tr>
+ <tr><td class="box">☐</td><td><b>Giriş</b> gerekçeyi ve açık bir amacı veya soruyu belirtir.</td></tr>
+ <tr><td class="box">☐</td><td><b>Uygunluk ölçütleri</b> ve çalışmaların nasıl gruplandığı açıkça raporlanır.</td></tr>
+ <tr><td class="box">☐</td><td><b>Bilgi kaynakları</b> her birinde son arama tarihiyle listelenir.</td></tr>
+ <tr><td class="box">☐</td><td><b>Tam arama stratejisi</b> en az bir veri tabanı için verilir (genellikle ek materyal olarak).</td></tr>
+ <tr><td class="box">☐</td><td><b>Seçim ve veri toplama</b> yöntemleri: değerlendirici sayısı, bağımsızlık, araçlar.</td></tr>
+ <tr><td class="box">☐</td><td><b>Yanlılık riski</b> yöntemleri ve aracı belirtilir; sonuçlar çalışma bazında raporlanır.</td></tr>
+ <tr><td class="box">☐</td><td><b>Sentez yöntemleri</b> açıklanır (etki ölçüleri, model, heterojenlik, duyarlılık analizleri).</td></tr>
+ <tr><td class="box">☐</td><td><b>PRISMA akış şeması</b> her aşamada sayılar ve tam metin dışlama nedenleriyle.</td></tr>
+ <tr><td class="box">☐</td><td><b>Kanıtın kesinliği</b> uygunsa değerlendirilir (örneğin GRADE ile).</td></tr>
+ <tr><td class="box">☐</td><td><b>Tartışma</b> kanıtın ve derleme sürecinin sınırlılıklarını kapsar.</td></tr>
+ <tr><td class="box">☐</td><td><b>Kayıt</b> numarası, protokole erişim, finansman ve çıkar çatışmaları raporlanır.</td></tr>
+ <tr><td class="box">☐</td><td><b>Veri ve kod erişilebilirliği</b> beyanı yer alır.</td></tr></table>
+ <h3>Reddedilmelerin çoğuna yol açan 5 hata</h3>
+ <table><tr><th>Hata</th><th>Çözüm</th></tr>
+ <tr><td>Kayıtlı protokol yok</td><td>Seçimden önce kaydedin; numarayı belirtin.</td></tr>
+ <tr><td>Yalnızca bir veri tabanında arama</td><td>En az 2 ila 3 tane kullanın, kayıtlarla birlikte.</td></tr>
+ <tr><td>Tüm seçimi tek kişi yaptı</td><td>Her iki aşamada iki bağımsız değerlendirici.</td></tr>
+ <tr><td>Belirsiz sonuçlar ("etkinlik")</td><td>Tam sonucu ve nasıl ölçüldüğünü belirtin.</td></tr>
+ <tr><td>Çok farklı çalışmaları birleştirmek</td><td>Önce klinik ve istatistiksel heterojenliği kontrol edin; gerekirse anlatısal sentez yapın.</td></tr></table>
+</section>
+
+<section class="page">
+ <div class="kick">Sonraki adım</div>
+ <h2>Yardıma mı ihtiyacınız var?</h2>
+ <div class="cta">
+  <h3 style="margin-top:0">Derlemenizde takıldınız mı?</h3>
+  <p>İsteyin: <b>48 saat içinde ücretsiz ve gizli proje değerlendirmesi</b>. Sistematik, kapsam ve literatür derlemeleri, meta-analiz, protokoller, istatistik ve makaleler; sorudan hakemlere yanıta kadar.</p>
+  <p><a href="https://reviewconsulting.eu">https://reviewconsulting.eu</a></p>
+  <p class="ex">E-posta: info@reviewconsulting.eu · YouTube: @ReviewConsultingSR</p>
+ </div>
+ <h3>Kaynaklar</h3>
+ <div class="refs">
+  <p>Higgins, J. P. T., Thomas, J., Chandler, J., Cumpston, M., Li, T., Page, M. J., &amp; Welch, V. A. (Eds.). (2024). <i>Cochrane handbook for systematic reviews of interventions</i> (Version 6.5). Cochrane. https://www.training.cochrane.org/handbook</p>
+  <p>Hulley, S. B., Cummings, S. R., Browner, W. S., Grady, D. G., &amp; Newman, T. B. (2013). <i>Designing clinical research</i> (4th ed.). Lippincott Williams &amp; Wilkins.</p>
+  <p>Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M., Hróbjartsson, A., Lalu, M. M., Li, T., Loder, E. W., Mayo-Wilson, E., McDonald, S., … Moher, D. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. <i>BMJ, 372</i>, n71. https://doi.org/10.1136/bmj.n71</p>
+  <p>Peters, M. D. J., Marnie, C., Tricco, A. C., Pollock, D., Munn, Z., Alexander, L., McInerney, P., Godfrey, C. M., &amp; Khalil, H. (2020). Updated methodological guidance for the conduct of scoping reviews. <i>JBI Evidence Synthesis, 18</i>(10), 2119–2126. https://doi.org/10.11124/JBIES-20-00167</p>
+  <p>Sterne, J. A. C., Hernán, M. A., Reeves, B. C., Savović, J., Berkman, N. D., Viswanathan, M., Henry, D., Altman, D. G., Ansari, M. T., Boutron, I., Carpenter, J. R., Chan, A.-W., Churchill, R., Deeks, J. J., Hróbjartsson, A., Kirkham, J., Jüni, P., Loke, Y. K., Pigott, T. D., … Higgins, J. P. T. (2016). ROBINS-I: A tool for assessing risk of bias in non-randomised studies of interventions. <i>BMJ, 355</i>, i4919. https://doi.org/10.1136/bmj.i4919</p>
+  <p>Sterne, J. A. C., Savović, J., Page, M. J., Elbers, R. G., Blencowe, N. S., Boutron, I., Cates, C. J., Cheng, H.-Y., Corbett, M. S., Eldridge, S. M., Emberson, J. R., Hernán, M. A., Hopewell, S., Hróbjartsson, A., Junqueira, D. R., Jüni, P., Kirkham, J. J., Lasserson, T., Li, T., … Higgins, J. P. T. (2019). RoB 2: A revised tool for assessing risk of bias in randomised trials. <i>BMJ, 366</i>, l4898. https://doi.org/10.1136/bmj.l4898</p>
+  <p>Tricco, A. C., Lillie, E., Zarin, W., O'Brien, K. K., Colquhoun, H., Levac, D., Moher, D., Peters, M. D. J., Horsley, T., Weeks, L., Hempel, S., Akl, E. A., Chang, C., McGowan, J., Stewart, L., Hartling, L., Aldcroft, A., Wilson, M. G., Garritty, C., … Straus, S. E. (2018). PRISMA extension for scoping reviews (PRISMA-ScR): Checklist and explanation. <i>Annals of Internal Medicine, 169</i>(7), 467–473. https://doi.org/10.7326/M18-0850</p>
+ </div>
+ <div class="foot"><span>© 2026 Review Consulting. Kendi araştırmanız ve öğretiminiz için ücretsiz kullanılabilir. Lütfen yeniden satmayın.</span><a href="https://reviewconsulting.eu">https://reviewconsulting.eu</a></div>
+</section>
+</body>
+</html>

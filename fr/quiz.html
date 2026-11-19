@@ -68,8 +68,8 @@ form .btn{width:100%;margin-top:20px}
 </head>
 <body>
 <header class="bar">
- <a class="brand" href="https://reviewconsulting.eu/">Review<span>Consulting</span></a>
- <a class="home" href="https://reviewconsulting.eu/">&larr; reviewconsulting.eu</a>
+ <a class="brand" href="https://reviewconsulting.eu/fr/">Review<span>Consulting</span></a>
+ <a class="home" href="https://reviewconsulting.eu/fr/">&larr; reviewconsulting.eu</a>
 </header>
 
 <section class="hero">
@@ -156,7 +156,7 @@ function showResult(name){
  var list=fixes.length?'<h3 style="margin:22px 0 0">Ce qu\'il faut corriger d\'abord</h3><ul class="fix">'+fixes.map(function(o){return '<li class="'+A[o.j].k+'"><b>'+o.x.s+': '+(o.j==2?"pas encore fait":"à améliorer")+'</b>'+o.x.fix+'</li>';}).join("")+'</ul>':'<p><b>Toutes les étapes sont couvertes.</b> Une dernière vérification indépendante avant la soumission reste utile.</p>';
  var esc=function(t){return String(t||"").replace(/[<>&"]/g,"");};
  $("result").innerHTML='<div class="progress"><div style="width:100%"></div></div><h2 style="margin:14px 0 4px">'+(name?esc(name)+", voici":"Voici")+' votre score de préparation</h2><div class="score">'+ring+'<div><p class="band '+cls+'">'+band+'</p><p style="margin:0;color:var(--muted)">'+pct+'% prête. '+msg+'</p></div></div>'+list+
- '<div class="cta"><h3>Un second regard sur votre projet ?</h3><p>J\'accompagne revues systématiques, méta-analyses, articles et travaux universitaires (mémoires, thèses). Envoyez-moi quelques lignes et recevez un avis honnête sous 48 heures. Gratuit et confidentiel.</p><a class="btn" href="https://reviewconsulting.eu/#contact">Demander votre évaluation gratuite</a></div>'+
+ '<div class="cta"><h3>Un second regard sur votre projet ?</h3><p>J\'accompagne revues systématiques, méta-analyses, articles et travaux universitaires (mémoires, thèses). Envoyez-moi quelques lignes et recevez un avis honnête sous 48 heures. Gratuit et confidentiel.</p><a class="btn" href="https://reviewconsulting.eu/fr/#contact">Demander votre évaluation gratuite</a></div>'+
  '<div class="social">De nouveaux tutoriels courts chaque semaine. S\'ils vous aident, abonnez-vous et likez sur YouTube et suivez-nous sur TikTok.<br><a class="s yt" href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">&#9654; S\'abonner sur YouTube</a><a class="s tt" href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">&#9834; Suivre sur TikTok</a></div>'+
  '<p style="text-align:center;margin-top:18px"><button class="link" type="button" onclick="location.reload()">Refaire le quiz</button></p>';
  $("gate").classList.add("hidden");$("result").classList.remove("hidden");

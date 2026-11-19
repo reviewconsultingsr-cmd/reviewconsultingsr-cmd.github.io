@@ -69,8 +69,8 @@ body{direction:rtl}
 </head>
 <body>
 <header class="bar">
- <a class="brand" href="https://reviewconsulting.eu/">Review<span>Consulting</span></a>
- <a class="home" href="https://reviewconsulting.eu/">&larr; reviewconsulting.eu</a>
+ <a class="brand" href="https://reviewconsulting.eu/ar/">Review<span>Consulting</span></a>
+ <a class="home" href="https://reviewconsulting.eu/ar/">&larr; reviewconsulting.eu</a>
 </header>
 
 <section class="hero">
@@ -157,7 +157,7 @@ function showResult(name){
  var list=fixes.length?'<h3 style="margin:22px 0 0">ما الذي تصلحه أولًا</h3><ul class="fix">'+fixes.map(function(o){return '<li class="'+A[o.j].k+'"><b>'+o.x.s+': '+(o.j==2?"لم يتم بعد":"يحتاج إلى عمل")+'</b>'+o.x.fix+'</li>';}).join("")+'</ul>':'<p><b>كل الخطوات مغطاة.</b> ومع ذلك، يستحق الأمر فحصًا مستقلًا أخيرًا قبل الإرسال.</p>';
  var esc=function(t){return String(t||"").replace(/[<>&"]/g,"");};
  $("result").innerHTML='<div class="progress"><div style="width:100%"></div></div><h2 style="margin:14px 0 4px">'+(name?esc(name)+"، إليك":"إليك")+' درجة جاهزيتك</h2><div class="score">'+ring+'<div><p class="band '+cls+'">'+band+'</p><p style="margin:0;color:var(--muted)">'+pct+'% جاهزة. '+msg+'</p></div></div>'+list+
- '<div class="cta"><h3>هل تريد رأيًا ثانيًا في مشروعك؟</h3><p>أساعد في المراجعات المنهجية، والتحليلات التلوية، والمقالات، والمشاريع الجامعية (الرسائل والأطروحات). أرسل لي بضعة أسطر واحصل على رأي صادق خلال 48 ساعة. مجانًا وبسرية.</p><a class="btn" href="https://reviewconsulting.eu/#contact">احصل على تقييمك المجاني</a></div>'+
+ '<div class="cta"><h3>هل تريد رأيًا ثانيًا في مشروعك؟</h3><p>أساعد في المراجعات المنهجية، والتحليلات التلوية، والمقالات، والمشاريع الجامعية (الرسائل والأطروحات). أرسل لي بضعة أسطر واحصل على رأي صادق خلال 48 ساعة. مجانًا وبسرية.</p><a class="btn" href="https://reviewconsulting.eu/ar/#contact">احصل على تقييمك المجاني</a></div>'+
  '<div class="social">دروس قصيرة جديدة كل أسبوع. إذا كانت تفيدك، اشترك واضغط إعجاب على YouTube وتابعنا على TikTok.<br><a class="s yt" href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">&#9654; اشترك على YouTube</a><a class="s tt" href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">&#9834; تابعنا على TikTok</a></div>'+
  '<p style="text-align:center;margin-top:18px"><button class="link" type="button" onclick="location.reload()">أعد الاختبار</button></p>';
  $("gate").classList.add("hidden");$("result").classList.remove("hidden");

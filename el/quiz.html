@@ -68,8 +68,8 @@ form .btn{width:100%;margin-top:20px}
 </head>
 <body>
 <header class="bar">
- <a class="brand" href="https://reviewconsulting.eu/">Review<span>Consulting</span></a>
- <a class="home" href="https://reviewconsulting.eu/">&larr; reviewconsulting.eu</a>
+ <a class="brand" href="https://reviewconsulting.eu/el/">Review<span>Consulting</span></a>
+ <a class="home" href="https://reviewconsulting.eu/el/">&larr; reviewconsulting.eu</a>
 </header>
 
 <section class="hero">
@@ -156,7 +156,7 @@ function showResult(name){
  var list=fixes.length?'<h3 style="margin:22px 0 0">Τι να διορθώσετε πρώτα</h3><ul class="fix">'+fixes.map(function(o){return '<li class="'+A[o.j].k+'"><b>'+o.x.s+': '+(o.j==2?"δεν έχει γίνει ακόμα":"χρειάζεται δουλειά")+'</b>'+o.x.fix+'</li>';}).join("")+'</ul>':'<p><b>Όλα τα βήματα καλύπτονται.</b> Ένας τελικός ανεξάρτητος έλεγχος πριν την υποβολή αξίζει πάντα.</p>';
  var esc=function(t){return String(t||"").replace(/[<>&"]/g,"");};
  $("result").innerHTML='<div class="progress"><div style="width:100%"></div></div><h2 style="margin:14px 0 4px">'+(name?esc(name)+", ορίστε":"Ορίστε")+' η βαθμολογία ετοιμότητάς σας</h2><div class="score">'+ring+'<div><p class="band '+cls+'">'+band+'</p><p style="margin:0;color:var(--muted)">'+pct+'% έτοιμη. '+msg+'</p></div></div>'+list+
- '<div class="cta"><h3>Θέλετε μια δεύτερη ματιά στο έργο σας;</h3><p>Βοηθάω σε συστηματικές ανασκοπήσεις, μετα-αναλύσεις, άρθρα και πανεπιστημιακές εργασίες (πτυχιακές, διπλωματικές, διατριβές). Στείλτε μου λίγες γραμμές και πάρτε ειλικρινή απάντηση σε 48 ώρες. Δωρεάν και εμπιστευτικά.</p><a class="btn" href="https://reviewconsulting.eu/#contact">Ζητήστε δωρεάν αξιολόγηση</a></div>'+
+ '<div class="cta"><h3>Θέλετε μια δεύτερη ματιά στο έργο σας;</h3><p>Βοηθάω σε συστηματικές ανασκοπήσεις, μετα-αναλύσεις, άρθρα και πανεπιστημιακές εργασίες (πτυχιακές, διπλωματικές, διατριβές). Στείλτε μου λίγες γραμμές και πάρτε ειλικρινή απάντηση σε 48 ώρες. Δωρεάν και εμπιστευτικά.</p><a class="btn" href="https://reviewconsulting.eu/el/#contact">Ζητήστε δωρεάν αξιολόγηση</a></div>'+
  '<div class="social">Νέα σύντομα μαθήματα κάθε εβδομάδα. Αν σας βοηθούν, κάντε εγγραφή και like στο YouTube και ακολουθήστε στο TikTok.<br><a class="s yt" href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">&#9654; Εγγραφή στο YouTube</a><a class="s tt" href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">&#9834; Ακολουθήστε στο TikTok</a></div>'+
  '<p style="text-align:center;margin-top:18px"><button class="link" type="button" onclick="location.reload()">Ξανακάντε το quiz</button></p>';
  $("gate").classList.add("hidden");$("result").classList.remove("hidden");
