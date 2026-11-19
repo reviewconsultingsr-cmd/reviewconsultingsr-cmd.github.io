@@ -72,6 +72,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
 .ok{text-align:center;padding:10px 0}
 .ok h2{margin:10px 0 6px}
 .disp{display:grid;gap:2px;font-weight:600;font-size:14px;margin-top:14px}.disp .consent{font-weight:400}
+.fine-n{text-align:center;font-size:12.5px;color:var(--muted);margin:10px 0 0}
 </style>
 </head>
 <body>
@@ -102,10 +103,10 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
    <label class="consent"><input type="radio" name="display" value="Full name" checked><span>Full name</span></label>
    <label class="consent"><input type="radio" name="display" value="Initials only"><span>Initials only</span></label>
   </div>
-  <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>Review Consulting may publish my review on its website and social media.</span></label>
   <label class="consent"><input type="checkbox" name="newsletter" value="yes"><span>Send me the free Systematic Review Starter Kit and the monthly newsletter (optional, unsubscribe anytime).</span></label>
   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
   <button class="btn" type="submit">Send my review</button>
+  <p class="fine-n">By sending, you agree that your review may appear on reviewconsulting.eu, with your name shown as you chose.</p>
   <p id="st" style="text-align:center;font-size:14px;margin:10px 0 0"></p>
  </form>
  <div id="done" class="ok hidden">
@@ -136,7 +137,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
   var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
   var name=f.name.value.trim();
   var disp=f.querySelector('input[name=display]:checked').value;
-  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\n\nReview:\n'+f.review.value.trim()+'\n\nShow name as: '+disp+'\nConsent to publish: yes\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
+  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\n\nReview:\n'+f.review.value.trim()+'\n\nShow name as: '+disp+'\nConsent to publish: yes (by sending)\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
   var d=new URLSearchParams();
   d.set('name',name);d.set('email',f.email.value.trim());d.set('review_type','Client review');d.set('stage','Rating '+rating+'/5');
   d.set('message',msg);d.set('_subject','New client review ('+rating+'/5) from '+name);d.set('_honey',f._honey.value);
