@@ -71,6 +71,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
 .opt-note{font-weight:400;color:var(--muted);font-size:13px}
 .ok{text-align:center;padding:10px 0}
 .ok h2{margin:10px 0 6px}
+.disp{display:grid;gap:2px;font-weight:600;font-size:14px;margin-top:14px}.disp .consent{font-weight:400}
 </style>
 </head>
 <body>
@@ -82,7 +83,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
 <section class="hero">
  <div class="kick">Thank you</div>
  <h1>How was working <span>together?</span></h1>
- <p>Your feedback helps other researchers and students decide if Review Consulting is right for them. It takes about 2 minutes.</p>
+ <p>Your feedback helps other researchers and students decide if Review Consulting is right for them. It takes less than a minute.</p>
 </section>
 
 <main class="card">
@@ -92,36 +93,16 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
     <button type="button" data-v="1" aria-label="1 star">&#9733;</button><button type="button" data-v="2" aria-label="2 stars">&#9733;</button><button type="button" data-v="3" aria-label="3 stars">&#9733;</button><button type="button" data-v="4" aria-label="4 stars">&#9733;</button><button type="button" data-v="5" aria-label="5 stars">&#9733;</button>
    </div>
   </label>
-  <label>What did we work on?
-   <select name="service" required>
-    <option value="">Choose one</option>
-    <option>Systematic or scoping review</option>
-    <option>Meta-analysis / statistics</option>
-    <option>Manuscript writing or editing</option>
-    <option>Thesis or dissertation support</option>
-    <option>Protocol / PROSPERO registration</option>
-    <option>Responses to reviewers</option>
-    <option>Other</option>
-   </select>
-  </label>
-  <label>Your review <span class="opt-note">(what was the problem, how did I help, what was the result?)</span>
-   <textarea name="review" required maxlength="1500" placeholder="e.g. I was stuck on my search strategy for months..."></textarea>
-  </label>
-  <label>What changed for you? <span class="opt-note">(optional, e.g. paper accepted, thesis passed, time saved)</span>
-   <input type="text" name="outcome" maxlength="200">
+  <label>Your review
+   <textarea name="review" required maxlength="1500" placeholder="A few words about working together"></textarea>
   </label>
   <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-  <label>Title and institution <span class="opt-note">(e.g. PhD candidate, University of ...)</span><input type="text" name="title" maxlength="150"></label>
   <label>Email <span class="opt-note">(private, never shown)</span><input type="email" name="email" required autocomplete="email"></label>
-  <label>How should your name appear on the website?
-   <select name="display" required>
-    <option>Full name and title</option>
-    <option>First name and institution only</option>
-    <option>Initials only</option>
-   </select>
-  </label>
-  <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Review Consulting may publish this review on reviewconsulting.eu and its social media, shown as I chose above. Reviews are checked before publishing and may be shortened, never changed in meaning.</span></label>
-  <label class="consent"><input type="checkbox" name="newsletter" value="yes"><span>Also send me the free Systematic Review Starter Kit and the monthly newsletter (optional, unsubscribe anytime).</span></label>
+  <div class="disp"><span>Show my name on the website as</span>
+   <label class="consent"><input type="radio" name="display" value="Full name" checked><span>Full name</span></label>
+   <label class="consent"><input type="radio" name="display" value="Initials only"><span>Initials only</span></label>
+  </div>
+  <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>Review Consulting may publish my review on its website and social media.</span></label>
   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
   <button class="btn" type="submit">Send my review</button>
   <p id="st" style="text-align:center;font-size:14px;margin:10px 0 0"></p>
@@ -153,11 +134,11 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
   if(!rating){st.style.color='#E25B5B';st.textContent='Please choose a star rating.';return;}
   var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
   var name=f.name.value.trim();
-  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\nService: '+f.service.value+'\n\nReview:\n'+f.review.value.trim()+'\n\nWhat changed: '+(f.outcome.value.trim()||'-')+'\nTitle/institution: '+(f.title.value.trim()||'-')+'\nShow name as: '+f.display.value+'\nConsent to publish: yes\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
+  var disp=f.querySelector('input[name=display]:checked').value;
+  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\n\nReview:\n'+f.review.value.trim()+'\n\nShow name as: '+disp+'\nConsent to publish: yes';
   var d=new URLSearchParams();
   d.set('name',name);d.set('email',f.email.value.trim());d.set('review_type','Client review');d.set('stage','Rating '+rating+'/5');
   d.set('message',msg);d.set('_subject','New client review ('+rating+'/5) from '+name);d.set('_honey',f._honey.value);
-  if(f.newsletter.checked){try{var bv=new URLSearchParams();bv.set('EMAIL',f.email.value.trim());bv.set('email_address_check','');bv.set('locale','en');bv.set('html_type','simple');fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:bv});}catch(x){}}
   fetch('https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec',{method:'POST',mode:'no-cors',body:d}).then(function(){
    f.classList.add('hidden');document.getElementById('done').classList.remove('hidden');window.scrollTo(0,0);
   }).catch(function(){
