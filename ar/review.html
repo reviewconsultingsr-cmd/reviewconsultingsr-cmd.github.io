@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شاركنا تجربتك | Review Consulting</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="شاركنا تجربتك في العمل مع Review Consulting.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230E2038'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%2340C4B4' font-family='Arial' font-weight='bold'%3ERC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2038;--navy2:#163050;--teal:#40C4B4;--teal-d:#0E7C6F;--yel:#FFD666;--ink:#1D2A3D;--muted:#5B6B82;--line:#C9D3E0;--light:#EEF3F8;--red:#E25B5B}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--light);font-size:16px;line-height:1.55}
+a{color:var(--teal-d)}
+.bar{background:var(--navy);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bar a.brand{color:#fff;font-weight:800;text-decoration:none;font-size:17px}
+.bar a.brand span{color:var(--teal)}
+.bar a.home{color:var(--teal);font-weight:700;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;text-align:center;padding:46px 20px 70px}
+.hero .kick{color:var(--teal);font-weight:800;letter-spacing:.14em;font-size:12px;text-transform:uppercase}
+.hero h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px auto 10px;max-width:720px}
+.hero h1 span{color:var(--yel)}
+.hero p{color:#D5DEEA;max-width:600px;margin:0 auto}
+.card{max-width:720px;margin:-44px auto 40px;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(14,32,56,.14);padding:34px 36px}
+@media(max-width:600px){.card{padding:24px 18px;margin:-44px 12px 30px}}
+.progress{height:8px;background:var(--light);border-radius:99px;overflow:hidden;margin-bottom:8px}
+.progress div{height:100%;background:var(--teal);width:0;transition:width .3s}
+.step{font-size:13px;color:var(--muted);font-weight:600}
+.stage{display:inline-block;background:var(--light);color:var(--navy);font-weight:700;font-size:12px;padding:3px 10px;border-radius:99px;margin:14px 0 6px}
+.q h2{font-size:21px;line-height:1.35;margin:4px 0 6px}
+.q .hint{color:var(--muted);font-size:14px;margin:0 0 18px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;border:2px solid var(--line);background:#fff;border-radius:10px;padding:14px 16px;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--teal);background:#F2FBFA}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.nav{display:flex;justify-content:space-between;margin-top:18px}
+.link{background:none;border:0;color:var(--muted);font:inherit;font-size:14px;cursor:pointer;padding:6px 0}
+.btn{display:inline-block;background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:13px 26px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{filter:brightness(.95)}
+.btn.dark{background:var(--navy);color:#fff}
+form label{display:block;font-weight:600;font-size:14px;margin:14px 0 0}
+form input[type=text],form input[type=email]{display:block;width:100%;margin-top:6px;padding:12px 14px;border:2px solid var(--line);border-radius:10px;font:inherit}
+form input:focus{outline:none;border-color:var(--teal)}
+.consent{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;color:var(--muted);font-size:13px!important}
+.consent input{margin-top:3px}
+form .btn{width:100%;margin-top:20px}
+.score{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin:6px 0 10px}
+.ring{width:132px;height:132px;flex:none}
+.band{font-size:24px;font-weight:800;margin:0 0 4px}
+.band.low{color:var(--red)}.band.mid{color:#C98A00}.band.high{color:var(--teal-d)}
+.fix{list-style:none;padding:0;margin:14px 0 0}
+.fix li{border-left:4px solid var(--teal);background:#F7FAFC;padding:12px 14px;border-radius:0 8px 8px 0;margin-bottom:10px;font-size:15px}
+.fix li.no{border-left-color:var(--red)}.fix li.partly{border-left-color:#E8B33D}
+.fix li b{display:block;margin-bottom:2px}
+.cta{background:var(--navy);color:#fff;border-radius:12px;padding:24px;margin-top:26px;text-align:center}
+.cta h3{margin:0 0 6px;font-size:20px}
+.cta p{color:#D5DEEA;margin:0 0 16px;font-size:15px}
+.social{text-align:center;margin-top:22px;font-size:15px;color:var(--muted)}
+.social a.s{display:inline-block;margin:8px 6px 0;padding:10px 18px;border-radius:8px;color:#fff;font-weight:700;text-decoration:none;font-size:14px}
+.yt{background:#FF0000}.tt{background:#111}
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 30px}
+.hidden{display:none}
+textarea,select{display:block;width:100%;margin-top:6px;padding:12px 14px;border:2px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+textarea{min-height:130px;resize:vertical}
+textarea:focus,select:focus{outline:none;border-color:var(--teal)}
+.stars{display:flex;gap:6px;margin-top:8px}
+.stars button{background:none;border:0;font-size:34px;line-height:1;cursor:pointer;color:#C9D3E0;padding:0}
+.stars button.on{color:#F5B700}
+.opt-note{font-weight:400;color:var(--muted);font-size:13px}
+.ok{text-align:center;padding:10px 0}
+.ok h2{margin:10px 0 6px}
+.disp{display:grid;gap:2px;font-weight:600;font-size:14px;margin-top:14px}.disp .consent{font-weight:400}
+.fine-n{text-align:center;font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.lsw{display:flex;gap:4px;justify-content:center;margin:14px 0 0}.lsw a{color:#fff;opacity:.75;text-decoration:none;font-size:13px;font-weight:600;padding:4px 7px;border-radius:4px}.lsw a.on{opacity:1;background:rgba(255,255,255,.15)}
+body{direction:rtl}.stars{direction:ltr;justify-content:flex-end}
+</style>
+</head>
+<body>
+<header class="bar">
+ <a class="brand" href="https://reviewconsulting.eu/">Review<span>Consulting</span></a>
+ <a class="home" href="https://reviewconsulting.eu/">&larr; reviewconsulting.eu</a>
+</header>
+
+<section class="hero">
+ <div class="kick">شكرًا لك</div>
+ <h1>كيف كان العمل <span>معًا؟</span></h1>
+ <p>رأيك يساعد الباحثين والطلاب الآخرين على معرفة ما إذا كانت Review Consulting مناسبة لهم. يستغرق أقل من دقيقة.</p>
+ <nav class="lsw" aria-label="Language"><a href="/review.html" hreflang="en" lang="en">EN</a><a href="/el/review.html" hreflang="el" lang="el">ΕΛ</a><a href="/es/review.html" hreflang="es" lang="es">ES</a><a href="/fr/review.html" hreflang="fr" lang="fr">FR</a><a href="/tr/review.html" hreflang="tr" lang="tr">TR</a><a href="/ar/review.html" hreflang="ar" lang="ar" class="on" aria-current="true">AR</a></nav>
+</section>
+
+<main class="card">
+ <form id="revForm">
+  <label>تقييمك
+   <div class="stars" id="stars">
+    <button type="button" data-v="1" aria-label="1 star">&#9733;</button><button type="button" data-v="2" aria-label="2 stars">&#9733;</button><button type="button" data-v="3" aria-label="3 stars">&#9733;</button><button type="button" data-v="4" aria-label="4 stars">&#9733;</button><button type="button" data-v="5" aria-label="5 stars">&#9733;</button>
+   </div>
+  </label>
+  <label>رأيك
+   <textarea name="review" required maxlength="1500" placeholder="بضع كلمات عن عملنا معًا"></textarea>
+  </label>
+  <label>اسمك<input type="text" name="name" required autocomplete="name"></label>
+  <label>البريد الإلكتروني <span class="opt-note">(خاص، لا يظهر أبدًا)</span><input type="email" name="email" required autocomplete="email"></label>
+  <div class="disp"><span>اعرض اسمي على الموقع على شكل</span>
+   <label class="consent"><input type="radio" name="display" value="Full name" checked><span>الاسم الكامل</span></label>
+   <label class="consent"><input type="radio" name="display" value="Initials only"><span>الأحرف الأولى فقط</span></label>
+  </div>
+  <label class="consent"><input type="checkbox" name="newsletter" value="yes"><span>أرسلوا لي Systematic Review Starter Kit المجاني والنشرة الشهرية (اختياري، يمكنك إلغاء الاشتراك في أي وقت).</span></label>
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <button class="btn" type="submit">أرسل رأيي</button>
+  <p class="fine-n">بالإرسال، توافق على أن يظهر رأيك على reviewconsulting.eu باسمك كما اخترت.</p>
+  <p id="st" style="text-align:center;font-size:14px;margin:10px 0 0"></p>
+ </form>
+ <div id="done" class="ok hidden">
+  <div style="font-size:46px">&#128591;</div>
+  <h2>شكرًا لك!</h2>
+  <p style="color:var(--muted)">تم إرسال رأيك. هذا يعني لنا الكثير.</p>
+  <div class="social">دروس منهجية مجانية في دقيقة واحدة:<br>
+   <a class="s yt" href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">&#9654; YouTube</a>
+   <a class="s tt" href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">&#9835; TikTok</a>
+  </div>
+ </div>
+</main>
+<p class="foot">Review Consulting &middot; <a href="https://reviewconsulting.eu/">https://reviewconsulting.eu</a></p>
+
+<script>
+(function(){
+ var rating=0,stars=document.querySelectorAll('#stars button');
+ function paint(n){stars.forEach(function(b){b.classList.toggle('on',+b.dataset.v<=n);});}
+ stars.forEach(function(b){
+  b.addEventListener('click',function(){rating=+b.dataset.v;paint(rating);});
+  b.addEventListener('mouseenter',function(){paint(+b.dataset.v);});
+  b.addEventListener('mouseleave',function(){paint(rating);});
+ });
+ var f=document.getElementById('revForm'),st=document.getElementById('st');
+ f.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!rating){st.style.color='#E25B5B';st.textContent='يرجى اختيار تقييم بالنجوم.';return;}
+  var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='جارٍ الإرسال...';
+  var name=f.name.value.trim();
+  var disp=f.querySelector('input[name=display]:checked').value;
+  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\n\nReview:\n'+f.review.value.trim()+'\n\nShow name as: '+disp+'\nLanguage: ar'+'\nConsent to publish: yes (by sending)\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
+  var d=new URLSearchParams();
+  d.set('name',name);d.set('email',f.email.value.trim());d.set('review_type','Client review');d.set('stage','Rating '+rating+'/5');
+  d.set('message',msg);d.set('_subject','New client review ('+rating+'/5) from '+name);d.set('_honey',f._honey.value);
+  if(f.newsletter.checked){try{var bv=new URLSearchParams();bv.set('EMAIL',f.email.value.trim());bv.set('email_address_check','');bv.set('locale','en');bv.set('html_type','simple');fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:bv});}catch(x){}}
+  fetch('https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec',{method:'POST',mode:'no-cors',body:d}).then(function(){
+   f.classList.add('hidden');document.getElementById('done').classList.remove('hidden');window.scrollTo(0,0);
+  }).catch(function(){
+   btn.disabled=false;btn.textContent='أرسل رأيي';st.style.color='#E25B5B';st.textContent='حدث خطأ. يرجى المحاولة مرة أخرى أو مراسلة info@reviewconsulting.eu';
+  });
+ });
+})();
+</script>
+</body>
+</html>

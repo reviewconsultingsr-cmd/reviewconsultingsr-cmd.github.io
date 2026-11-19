@@ -73,6 +73,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
 .ok h2{margin:10px 0 6px}
 .disp{display:grid;gap:2px;font-weight:600;font-size:14px;margin-top:14px}.disp .consent{font-weight:400}
 .fine-n{text-align:center;font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.lsw{display:flex;gap:4px;justify-content:center;margin:14px 0 0}.lsw a{color:#fff;opacity:.75;text-decoration:none;font-size:13px;font-weight:600;padding:4px 7px;border-radius:4px}.lsw a.on{opacity:1;background:rgba(255,255,255,.15)}
 </style>
 </head>
 <body>
@@ -85,6 +86,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
  <div class="kick">Thank you</div>
  <h1>How was working <span>together?</span></h1>
  <p>Your feedback helps other researchers and students decide if Review Consulting is right for them. It takes less than a minute.</p>
+ <nav class="lsw" aria-label="Language"><a href="/review.html" hreflang="en" lang="en" class="on" aria-current="true">EN</a><a href="/el/review.html" hreflang="el" lang="el">ΕΛ</a><a href="/es/review.html" hreflang="es" lang="es">ES</a><a href="/fr/review.html" hreflang="fr" lang="fr">FR</a><a href="/tr/review.html" hreflang="tr" lang="tr">TR</a><a href="/ar/review.html" hreflang="ar" lang="ar">AR</a></nav>
 </section>
 
 <main class="card">
@@ -137,7 +139,7 @@ textarea:focus,select:focus{outline:none;border-color:var(--teal)}
   var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
   var name=f.name.value.trim();
   var disp=f.querySelector('input[name=display]:checked').value;
-  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\n\nReview:\n'+f.review.value.trim()+'\n\nShow name as: '+disp+'\nConsent to publish: yes (by sending)\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
+  var msg='CLIENT REVIEW (for website, needs your approval)\n\nRating: '+rating+'/5\n\nReview:\n'+f.review.value.trim()+'\n\nShow name as: '+disp+'\nLanguage: en'+'\nConsent to publish: yes (by sending)\nNewsletter: '+(f.newsletter.checked?'yes (added to Brevo)':'no');
   var d=new URLSearchParams();
   d.set('name',name);d.set('email',f.email.value.trim());d.set('review_type','Client review');d.set('stage','Rating '+rating+'/5');
   d.set('message',msg);d.set('_subject','New client review ('+rating+'/5) from '+name);d.set('_honey',f._honey.value);

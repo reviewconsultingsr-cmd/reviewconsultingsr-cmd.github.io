@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is Your Systematic Review Ready? Free 2-Minute Quiz | Review Consulting</title>
+<meta name="description" content="Free 2-minute quiz: check whether your systematic review, meta-analysis, manuscript or thesis is ready for submission. Get your score and a personal list of what to fix.">
+<meta property="og:title" content="Is your systematic review ready? Take the 2-minute quiz">
+<meta property="og:description" content="10 questions, an instant score and a personal list of what to fix before you submit.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230E2038'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%2340C4B4' font-family='Arial' font-weight='bold'%3ERC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2038;--navy2:#163050;--teal:#40C4B4;--teal-d:#0E7C6F;--yel:#FFD666;--ink:#1D2A3D;--muted:#5B6B82;--line:#C9D3E0;--light:#EEF3F8;--red:#E25B5B}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--light);font-size:16px;line-height:1.55}
+a{color:var(--teal-d)}
+.bar{background:var(--navy);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bar a.brand{color:#fff;font-weight:800;text-decoration:none;font-size:17px}
+.bar a.brand span{color:var(--teal)}
+.bar a.home{color:var(--teal);font-weight:700;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;text-align:center;padding:46px 20px 70px}
+.hero .kick{color:var(--teal);font-weight:800;letter-spacing:.14em;font-size:12px;text-transform:uppercase}
+.hero h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px auto 10px;max-width:720px}
+.hero h1 span{color:var(--yel)}
+.hero p{color:#D5DEEA;max-width:600px;margin:0 auto}
+.card{max-width:720px;margin:-44px auto 40px;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(14,32,56,.14);padding:34px 36px}
+@media(max-width:600px){.card{padding:24px 18px;margin:-44px 12px 30px}}
+.progress{height:8px;background:var(--light);border-radius:99px;overflow:hidden;margin-bottom:8px}
+.progress div{height:100%;background:var(--teal);width:0;transition:width .3s}
+.step{font-size:13px;color:var(--muted);font-weight:600}
+.stage{display:inline-block;background:var(--light);color:var(--navy);font-weight:700;font-size:12px;padding:3px 10px;border-radius:99px;margin:14px 0 6px}
+.q h2{font-size:21px;line-height:1.35;margin:4px 0 6px}
+.q .hint{color:var(--muted);font-size:14px;margin:0 0 18px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;border:2px solid var(--line);background:#fff;border-radius:10px;padding:14px 16px;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--teal);background:#F2FBFA}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.nav{display:flex;justify-content:space-between;margin-top:18px}
+.link{background:none;border:0;color:var(--muted);font:inherit;font-size:14px;cursor:pointer;padding:6px 0}
+.btn{display:inline-block;background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:13px 26px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{filter:brightness(.95)}
+.btn.dark{background:var(--navy);color:#fff}
+form label{display:block;font-weight:600;font-size:14px;margin:14px 0 0}
+form input[type=text],form input[type=email]{display:block;width:100%;margin-top:6px;padding:12px 14px;border:2px solid var(--line);border-radius:10px;font:inherit}
+form input:focus{outline:none;border-color:var(--teal)}
+.consent{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;color:var(--muted);font-size:13px!important}
+.consent input{margin-top:3px}
+form .btn{width:100%;margin-top:20px}
+.score{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin:6px 0 10px}
+.ring{width:132px;height:132px;flex:none}
+.band{font-size:24px;font-weight:800;margin:0 0 4px}
+.band.low{color:var(--red)}.band.mid{color:#C98A00}.band.high{color:var(--teal-d)}
+.fix{list-style:none;padding:0;margin:14px 0 0}
+.fix li{border-left:4px solid var(--teal);background:#F7FAFC;padding:12px 14px;border-radius:0 8px 8px 0;margin-bottom:10px;font-size:15px}
+.fix li.no{border-left-color:var(--red)}.fix li.partly{border-left-color:#E8B33D}
+.fix li b{display:block;margin-bottom:2px}
+.cta{background:var(--navy);color:#fff;border-radius:12px;padding:24px;margin-top:26px;text-align:center}
+.cta h3{margin:0 0 6px;font-size:20px}
+.cta p{color:#D5DEEA;margin:0 0 16px;font-size:15px}
+.social{text-align:center;margin-top:22px;font-size:15px;color:var(--muted)}
+.social a.s{display:inline-block;margin:8px 6px 0;padding:10px 18px;border-radius:8px;color:#fff;font-weight:700;text-decoration:none;font-size:14px}
+.yt{background:#FF0000}.tt{background:#111}
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 30px}
+.hidden{display:none}
+.lsw{display:flex;gap:4px;justify-content:center;margin:14px 0 0}.lsw a{color:#fff;opacity:.75;text-decoration:none;font-size:13px;font-weight:600;padding:4px 7px;border-radius:4px}.lsw a.on{opacity:1;background:rgba(255,255,255,.15)}
+</style>
+</head>
+<body>
+<header class="bar">
+ <a class="brand" href="https://reviewconsulting.eu/">Review<span>Consulting</span></a>
+ <a class="home" href="https://reviewconsulting.eu/">&larr; reviewconsulting.eu</a>
+</header>
+
+<section class="hero">
+ <div class="kick">Δωρεάν quiz 2 λεπτών</div>
+ <h1>Είναι η συστηματική σας ανασκόπηση <span>έτοιμη για υποβολή;</span></h1>
+ <p>10 γρήγορες ερωτήσεις για το ερώτημα, το πρωτόκολλο, την αναζήτηση, την επιλογή μελετών, την ανάλυση και τη συγγραφή. Πάρτε τη βαθμολογία ετοιμότητάς σας και μια προσωπική λίστα με όσα πρέπει να διορθώσετε. Ισχύει για ανασκοπήσεις, μετα-αναλύσεις, άρθρα και πανεπιστημιακές εργασίες (πτυχιακές, διπλωματικές, διατριβές).</p>
+ <nav class="lsw" aria-label="Language"><a href="/quiz.html" hreflang="en" lang="en">EN</a><a href="/el/quiz.html" hreflang="el" lang="el" class="on" aria-current="true">ΕΛ</a><a href="/es/quiz.html" hreflang="es" lang="es">ES</a><a href="/fr/quiz.html" hreflang="fr" lang="fr">FR</a><a href="/tr/quiz.html" hreflang="tr" lang="tr">TR</a><a href="/ar/quiz.html" hreflang="ar" lang="ar">AR</a></nav>
+</section>
+
+<main class="card" id="app">
+ <div id="quiz">
+  <div class="progress"><div id="bar"></div></div>
+  <div class="step" id="step"></div>
+  <div class="q" id="q"></div>
+  <div class="nav"><button class="link" id="back" type="button">&larr; Πίσω</button><span></span></div>
+ </div>
+
+ <div id="gate" class="hidden">
+  <div class="progress"><div style="width:100%"></div></div>
+  <h2 style="margin:16px 0 6px">Τα αποτελέσματά σας είναι έτοιμα</h2>
+  <p style="color:var(--muted);margin:0">Πού να σας τα στείλω; Θα δείτε τη βαθμολογία σας αμέσως σε αυτή τη σελίδα και θα λάβετε με email το δωρεάν <b>Systematic Review Starter Kit</b> και σύντομες πρακτικές συμβουλές.</p>
+  <form id="quizForm">
+   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <label>Όνομα<input type="text" name="name" required autocomplete="given-name"></label>
+   <label>Email<input type="email" name="email" required autocomplete="email"></label>
+   <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>Συμφωνώ να λαμβάνω με email τα αποτελέσματά μου, το Starter Kit και περιστασιακά συμβουλές. Μπορώ να διαγραφώ όποτε θέλω.</span></label>
+   <button class="btn" type="submit">Δείτε τα αποτελέσματα</button>
+  </form>
+ </div>
+
+ <div id="result" class="hidden"></div>
+</main>
+
+<div class="foot">&copy; Review Consulting &middot; Dr. Stylianos Sergios Chatziioannou &middot; <a href="https://reviewconsulting.eu/">https://reviewconsulting.eu</a></div>
+
+<script>
+(function(){
+var Q=[
+ {s:"Ερευνητικό ερώτημα",q:"Είναι το ερώτημά σας διατυπωμένο με δομή (PICO, PCC ή PEO);",h:"Για παράδειγμα: πληθυσμός, παρέμβαση, σύγκριση και έκβαση σε μία πρόταση.",
+  fix:"Γράψτε το ερώτημα με PICO (ή PCC για scoping reviews). Αν δεν μπορείτε να συμπληρώσετε ένα στοιχείο, εκείνο το κομμάτι του ερωτήματος είναι ακόμα ανοιχτό. Η σελίδα 2 του Starter Kit σας καθοδηγεί."},
+ {s:"Ερευνητικό ερώτημα",q:"Έχετε ελέγξει ότι καμία πρόσφατη ανασκόπηση δεν απαντά ήδη στο ίδιο ερώτημα;",h:"Ψάξτε στο PROSPERO, στη Cochrane Library και στο PubMed για ανασκοπήσεις των τελευταίων 3 έως 5 ετών.",
+  fix:"Ψάξτε στο PROSPERO και στη Cochrane Library πριν προχωρήσετε. Αν υπάρχει πρόσφατη ανασκόπηση, χρειάζεστε σαφή λόγο (νέες μελέτες, άλλος πληθυσμός) για να κάνετε άλλη."},
+ {s:"Πρωτόκολλο",q:"Είναι καταχωρημένο το πρωτόκολλό σας (PROSPERO, OSF ή INPLASY);",h:"Η καταχώριση πριν από την τελική αναζήτηση δείχνει ότι η μέθοδος σχεδιάστηκε από πριν.",
+  fix:"Καταχωρήστε το πρωτόκολλο πριν από την τελική αναζήτηση. Πολλά περιοδικά ζητούν πλέον αριθμό καταχώρισης, και σας προστατεύει από διπλές ανασκοπήσεις."},
+ {s:"Αναζήτηση",q:"Έχετε ψάξει σε τουλάχιστον 2 έως 3 βάσεις δεδομένων με πλήρη, επαναλήψιμη στρατηγική αναζήτησης;",h:"Για παράδειγμα PubMed, Embase και CENTRAL, με όρους MeSH και λογική AND/OR.",
+  fix:"Ψάξτε σε τουλάχιστον 2 έως 3 βάσεις και κρατήστε την πλήρη στρατηγική για την καθεμία. Χρησιμοποιήστε OR μέσα σε μια έννοια και AND ανάμεσα στις έννοιες, μαζί με όρους MeSH."},
+ {s:"Επιλογή μελετών",q:"Έγινε η επιλογή των μελετών ανεξάρτητα από δύο αξιολογητές;",h:"Σε επίπεδο τίτλου/περίληψης και πλήρους κειμένου, με επίλυση διαφωνιών με συζήτηση ή τρίτο άτομο.",
+  fix:"Χρησιμοποιήστε δύο ανεξάρτητους αξιολογητές ή τουλάχιστον διπλό έλεγχο σε τυχαίο 20% των εγγραφών και αναφέρετε τη συμφωνία (Cohen kappa)."},
+ {s:"Επιλογή μελετών",q:"Έχετε διάγραμμα ροής PRISMA 2020 με τους λόγους αποκλεισμού στο πλήρες κείμενο;",h:"Αριθμοί σε κάθε στάδιο και οι λόγοι αποκλεισμού των μελετών.",
+  fix:"Φτιάξτε διάγραμμα ροής PRISMA 2020 από το αρχείο επιλογής, με τον αριθμό που αποκλείστηκε σε κάθε στάδιο και τους λόγους στο πλήρες κείμενο."},
+ {s:"Ποιότητα",q:"Έχετε αξιολογήσει τον κίνδυνο μεροληψίας με το σωστό εργαλείο για κάθε σχεδιασμό μελέτης;",h:"RoB 2 για κλινικές δοκιμές, ROBINS-I για μη τυχαιοποιημένες, NOS ή JBI για μελέτες παρατήρησης.",
+  fix:"Διαλέξτε εργαλείο ανάλογα με τον σχεδιασμό (RoB 2, ROBINS-I, NOS/JBI, QUADAS-2), αξιολογήστε ανά τομέα και δείξτε γράφημα τύπου φαναριού."},
+ {s:"Ανάλυση",q:"Είναι σαφές το σχέδιο ανάλυσης (μοντέλο μετα-ανάλυσης, ετερογένεια ή αφηγηματική σύνθεση);",h:"Για παράδειγμα τυχαία αποτελέσματα με I², ή δομημένη αφηγηματική σύνθεση (SWiM) όταν η συγκέντρωση δεν ενδείκνυται.",
+  fix:"Αποφασίστε από πριν: τυχαία ή σταθερά αποτελέσματα, πώς θα αναφέρετε την ετερογένεια (I²), αναλύσεις υποομάδων και ευαισθησίας, ή αφηγηματική σύνθεση SWiM αν οι μελέτες δεν συνδυάζονται."},
+ {s:"Βεβαιότητα",q:"Έχετε βαθμολογήσει τη βεβαιότητα των δεδομένων (GRADE) για τις κύριες εκβάσεις;",h:"Πίνακας Summary of Findings, μία γραμμή ανά κύρια έκβαση.",
+  fix:"Βαθμολογήστε τη βεβαιότητα με GRADE (κίνδυνος μεροληψίας, ασυνέπεια, έμμεση τεκμηρίωση, ανακρίβεια, μεροληψία δημοσίευσης) και παρουσιάστε πίνακα Summary of Findings."},
+ {s:"Συγγραφή",q:"Έχετε διαλέξει περιοδικό και ελέγξει το άρθρο σας με τη λίστα PRISMA 2020;",h:"Αντικείμενο, ευρετηρίαση, κόστος και οδηγίες προς συγγραφείς.",
+  fix:"Διαλέξτε περιοδικό με ευρετηρίαση που δημοσιεύει παρόμοιες ανασκοπήσεις, διαβάστε δύο φορές τις οδηγίες και συμπληρώστε τη λίστα PRISMA 2020 πριν την υποβολή."}
+];
+var A=[{k:"yes",t:"Ναι",d:"Έγινε και είναι τεκμηριωμένο",p:2},{k:"partly",t:"Εν μέρει / δεν είμαι σίγουρος",d:"Ξεκίνησε, ή δεν είμαι σίγουρος ότι είναι σωστό",p:1},{k:"no",t:"Όχι ακόμα",d:"Δεν το έχω κάνει",p:0}];
+var ans=[],i=0;
+var $=function(id){return document.getElementById(id);};
+function render(){
+ $("bar").style.width=(i/Q.length*100)+"%";
+ $("step").textContent="Ερώτηση "+(i+1)+" από "+Q.length;
+ var x=Q[i],h='<span class="stage">'+x.s+'</span><h2>'+x.q+'</h2><p class="hint">'+x.h+'</p><div class="opts">';
+ A.forEach(function(a,j){h+='<button class="opt" type="button" data-j="'+j+'">'+a.t+'<small>'+a.d+'</small></button>';});
+ $("q").innerHTML=h+'</div>';
+ $("back").style.visibility=i?"visible":"hidden";
+ [].forEach.call(document.querySelectorAll(".opt"),function(b){b.onclick=function(){ans[i]=+b.getAttribute("data-j");i++;if(i<Q.length)render();else{$("quiz").classList.add("hidden");$("gate").classList.remove("hidden");}};});
+}
+$("back").onclick=function(){if(i>0){i--;render();}};
+render();
+
+function score(){return ans.reduce(function(s,j){return s+A[j].p;},0);}
+function showResult(name){
+ var sc=score(),pct=Math.round(sc/20*100),band,cls,msg;
+ if(sc>=16){band="Σχεδόν έτοιμη";cls="high";msg="Η ανασκόπησή σας είναι σε καλή κατάσταση. Διορθώστε τα παρακάτω και είναι κοντά στην υποβολή.";}
+ else if(sc>=9){band="Σε καλό δρόμο, με κενά";cls="mid";msg="Οι βάσεις υπάρχουν, αλλά τα κενά παρακάτω είναι αυτά που ελέγχουν πρώτα οι κριτές.";}
+ else{band="Αρχικό στάδιο";cls="low";msg="Είστε στην αρχή, που είναι η καλύτερη στιγμή να στηθεί σωστά η μέθοδος. Εστιάστε στα πρώτα σημεία παρακάτω.";}
+ var C=2*Math.PI*52,off=C*(1-sc/20),col=cls=="high"?"#0E7C6F":cls=="mid"?"#E8B33D":"#E25B5B";
+ var ring='<svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="#EEF3F8" stroke-width="12"/><circle cx="60" cy="60" r="52" fill="none" stroke="'+col+'" stroke-width="12" stroke-linecap="round" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" transform="rotate(-90 60 60)"/><text x="60" y="58" text-anchor="middle" font-size="30" font-weight="800" fill="#0E2038" font-family="Inter,Arial">'+sc+'</text><text x="60" y="80" text-anchor="middle" font-size="13" fill="#5B6B82" font-family="Inter,Arial">από 20</text></svg>';
+ var fixes=Q.map(function(x,k){return {x:x,j:ans[k]};}).filter(function(o){return o.j>0;}).sort(function(a,b){return b.j-a.j;});
+ var list=fixes.length?'<h3 style="margin:22px 0 0">Τι να διορθώσετε πρώτα</h3><ul class="fix">'+fixes.map(function(o){return '<li class="'+A[o.j].k+'"><b>'+o.x.s+': '+(o.j==2?"δεν έχει γίνει ακόμα":"χρειάζεται δουλειά")+'</b>'+o.x.fix+'</li>';}).join("")+'</ul>':'<p><b>Όλα τα βήματα καλύπτονται.</b> Ένας τελικός ανεξάρτητος έλεγχος πριν την υποβολή αξίζει πάντα.</p>';
+ var esc=function(t){return String(t||"").replace(/[<>&"]/g,"");};
+ $("result").innerHTML='<div class="progress"><div style="width:100%"></div></div><h2 style="margin:14px 0 4px">'+(name?esc(name)+", ορίστε":"Ορίστε")+' η βαθμολογία ετοιμότητάς σας</h2><div class="score">'+ring+'<div><p class="band '+cls+'">'+band+'</p><p style="margin:0;color:var(--muted)">'+pct+'% έτοιμη. '+msg+'</p></div></div>'+list+
+ '<div class="cta"><h3>Θέλετε μια δεύτερη ματιά στο έργο σας;</h3><p>Βοηθάω σε συστηματικές ανασκοπήσεις, μετα-αναλύσεις, άρθρα και πανεπιστημιακές εργασίες (πτυχιακές, διπλωματικές, διατριβές). Στείλτε μου λίγες γραμμές και πάρτε ειλικρινή απάντηση σε 48 ώρες. Δωρεάν και εμπιστευτικά.</p><a class="btn" href="https://reviewconsulting.eu/#contact">Ζητήστε δωρεάν αξιολόγηση</a></div>'+
+ '<div class="social">Νέα σύντομα μαθήματα κάθε εβδομάδα. Αν σας βοηθούν, κάντε εγγραφή και like στο YouTube και ακολουθήστε στο TikTok.<br><a class="s yt" href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">&#9654; Εγγραφή στο YouTube</a><a class="s tt" href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">&#9834; Ακολουθήστε στο TikTok</a></div>'+
+ '<p style="text-align:center;margin-top:18px"><button class="link" type="button" onclick="location.reload()">Ξανακάντε το quiz</button></p>';
+ $("gate").classList.add("hidden");$("result").classList.remove("hidden");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+
+$("quizForm").addEventListener("submit",function(e){
+ e.preventDefault();var f=e.target;if(f._honey.value)return;
+ var name=f.name.value.trim(),em=f.email.value.trim(),sc=score();
+ var detail=Q.map(function(x,k){return (k+1)+". "+x.s+": "+A[ans[k]].t;}).join("\n");
+ try{
+  var d=new URLSearchParams();d.set("name",name);d.set("email",em);d.set("review_type","Readiness quiz");d.set("stage","Lead: quiz score "+sc+"/20");
+  d.set("message","Completed the readiness quiz (EL) on https://reviewconsulting.eu/el/quiz.html. Score: "+sc+"/20.\n"+detail+"\n(consent to tips: yes)");d.set("_subject","New quiz lead ("+sc+"/20)");
+  fetch("https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec",{method:"POST",mode:"no-cors",body:d});
+ }catch(x){}
+ try{
+  var bv=new URLSearchParams();bv.set("EMAIL",em);bv.set("email_address_check","");bv.set("locale","el");bv.set("html_type","simple");
+  fetch("https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==",{method:"POST",mode:"no-cors",body:bv});
+ }catch(x){}
+ showResult(name);
+});
+})();
+</script>
+</body>
+</html>
