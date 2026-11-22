@@ -519,6 +519,7 @@ html,body{overflow-x:clip}
     <label>Ονοματεπώνυμο<input name="name" required autocomplete="name"></label>
     <label>Email<input name="email" type="email" required autocomplete="email"></label>
    </div>
+   <label>Κινητό τηλέφωνο<input name="phone" type="tel" required autocomplete="tel" inputmode="tel" pattern="[+0-9 \(\)\-]{8,20}" dir="ltr" placeholder="π.χ. +30 69XXXXXXXX"></label>
    <div class="r2">
     <label>Είδος ανασκόπησης
      <select name="review_type">
@@ -570,7 +571,7 @@ html,body{overflow-x:clip}
   e.preventDefault();
   var d=new FormData(f), b=f.querySelector('button[type=submit]');
   b.disabled=true; b.textContent=T('Sending...'); st.style.color='#1F8F82'; st.textContent='';
-  var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nType of review: '+d.get('review_type')+'\nStage: '+d.get('stage')+'\n\n'+d.get('message');
+  var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+d.get('phone')+'\nType of review: '+d.get('review_type')+'\nStage: '+d.get('stage')+'\n\n'+d.get('message');
   var mailto='mailto:info@reviewconsulting.eu?subject='+encodeURIComponent('Free assessment request from '+d.get('name'))+'&body='+encodeURIComponent(body);
   if(d.get('newsletter')==='yes'){try{var bv=new URLSearchParams();bv.set('EMAIL',String(d.get('email')||'').trim());bv.set('email_address_check','');bv.set('locale','en');bv.set('html_type','simple');fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:bv});}catch(x){}}
   var ctrl=new AbortController(); var t=setTimeout(function(){ctrl.abort();},15000);
