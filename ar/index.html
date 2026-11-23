@@ -257,7 +257,23 @@ html,body{overflow-x:clip}
 .nlpop-box{position:relative;background:#fff;border-radius:6px;max-width:440px;width:100%;padding:36px 32px 28px;border-top:3px solid var(--teal-l)}
 .nlpop-x{position:absolute;top:8px;right:12px;border:0;background:none;font-size:28px;line-height:1;color:var(--slate);cursor:pointer}
 .nlpop h3{font-family:var(--serif);font-weight:500;font-size:24px;margin:0 0 8px}.nlpop p{margin:0 0 16px;color:var(--slate);font-size:15.5px}
-.nlpop form{gap:10px;position:relative}.nlpop .b{justify-self:stretch;text-align:center}.nlpop-s{font-size:13px!important;margin:12px 0 0!important}</style>
+.nlpop form{gap:10px;position:relative}.nlpop .b{justify-self:stretch;text-align:center}.nlpop-s{font-size:13px!important;margin:12px 0 0!important}
+/* reviews slider */
+.quotes{display:flex;grid-template-columns:none;gap:28px;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
+.quotes::-webkit-scrollbar{display:none}
+.quotes .quote{flex:0 0 calc((100% - 56px)/3);scroll-snap-align:start;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:30px 28px 26px}
+.quotes .quote blockquote{font-size:clamp(17px,1.3vw,19px)}
+.quotes .quote blockquote:before{font-size:64px;margin-bottom:12px}
+.quotes .quote figcaption{margin-top:auto;padding-top:22px}
+.qnav{display:flex;gap:10px;justify-content:flex-end;margin-top:26px}
+.qnav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:background .15s,opacity .15s}
+.qnav button:hover:not(:disabled){background:rgba(255,255,255,.1)}
+.qnav button:focus-visible{outline:2px solid var(--teal-l);outline-offset:3px}
+.qnav button:disabled{opacity:.3;cursor:default}
+@media (max-width:1000px){.quotes{gap:20px;max-width:none}.quotes .quote{flex-basis:calc((100% - 20px)/2)}}
+@media (max-width:640px){.quotes .quote{flex-basis:86%;padding:24px 22px}}
+@media (prefers-reduced-motion:reduce){.quotes{scroll-behavior:auto}}
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500;600&family=Commissioner:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap" rel="stylesheet">
 <style>
@@ -415,6 +431,12 @@ svg{direction:ltr}.hero-fig,.prisma{direction:ltr}.hero-fig figcaption,.prisma f
     <figcaption>S. K.، مشروع التخرج</figcaption>
    </figure>
   </div>
+  <div class="qnav"><button type="button" aria-label="المراجعات السابقة">&lsaquo;</button><button type="button" aria-label="المراجعات التالية">&rsaquo;</button></div>
+  <script>(function(){var q=document.querySelector('.quotes');if(!q)return;var n=document.querySelector('.qnav');if(!n)return;var b=n.querySelectorAll('button');var rtl=getComputedStyle(q).direction==='rtl';
+function st(){var f=q.querySelector('.quote');return f?f.getBoundingClientRect().width+parseFloat(getComputedStyle(q).columnGap||28):300}
+function up(){var x=Math.abs(q.scrollLeft),m=q.scrollWidth-q.clientWidth-2;b[0].disabled=x<=2;b[1].disabled=x>=m;n.style.display=q.scrollWidth>q.clientWidth+2?'':'none'}
+b[0].onclick=function(){q.scrollBy({left:(rtl?1:-1)*st()})};b[1].onclick=function(){q.scrollBy({left:(rtl?-1:1)*st()})};
+q.addEventListener('scroll',up,{passive:true});addEventListener('resize',up);up()})();</script>
  </div>
 </section>
 
